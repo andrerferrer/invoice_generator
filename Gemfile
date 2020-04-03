@@ -27,3 +27,7 @@ group :development, :test do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'dotenv-rails'
 end
+
+#Gems to handle/generate pdf on the view side
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary'
