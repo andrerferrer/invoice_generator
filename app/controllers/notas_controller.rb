@@ -5,7 +5,7 @@ class NotasController < ApplicationController
 
   def show
     # @nota = something that will come from create action
-
+@nota = 1
     respond_to do |format|
       format.html
       format.pdf do
