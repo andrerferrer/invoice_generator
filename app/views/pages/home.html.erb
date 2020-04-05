@@ -1,2 +1,96 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%# Banner %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://smartsociates.com/immortalHeader/images/slider_background.svg);">
+  <div class="container">
+    <h1>Sua nota fiscal gerada de forma <strong>facil</strong> e <strong>rapida</strong>!</h1>
+    <p>Basta preencher o formulario abaixo e clicar em "Gerar nota"</p>
+    <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+  </div>
+</div>
+<div class="container form-block">
+    <%# Form %>
+    <form>
+        <h4>Dados do Prestador de serviço</h4>
+        <div class="form-row mt-3">
+            <div class="col">
+                <label for="inputEmail4">Nome da Empresa</label>
+                <input type="text" class="form-control" placeholder="Nome da empresa">
+            </div>
+                <div class="col">
+                <label for="inputEmail4">CNPJ</label>
+                <input type="text" class="form-control" placeholder="CNPJ">
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group mt-2">
+            <label for="inputAddress2">Complemento</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        </div>
+        <div class="form-row mt-2">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Cidade</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="city">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">Estado</label>
+                <select id="inputState" class="form-control">
+                    <option selected>Choose...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Código postal</label>
+                <input type="text" class="form-control" id="inputZip">
+            </div>
+        </div>
+
+        <div class="form-row mt-2">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">NIRE</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="NIRE">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPassword4">Número da nota</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Número da nota">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPassword4">Data de emissão</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Data de emissão">
+            </div>
+        </div>
+        <h4>Dados do Contratante</h4>
+        <div class="form-row mt-3">
+            <div class="col">
+                <label for="inputEmail4">Nome</label>
+                <input type="text" class="form-control" placeholder="Nome da empresa">
+            </div>
+                <div class="col">
+                <label for="inputEmail4">CPF/CNPJ</label>
+                <input type="text" class="form-control" placeholder="CNPJ">
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Gerar Nota</button>
+    </form>
+</div>
+
+
+<%# Footer %>
+<div class="footer justify-content-center">
+    <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
