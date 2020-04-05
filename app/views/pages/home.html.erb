@@ -1,85 +1,112 @@
 <%# Banner %>
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://smartsociates.com/immortalHeader/images/slider_background.svg);">
   <div class="container">
-    <h1>Sua nota fiscal gerada de forma <strong>facil</strong> e <strong>rapida</strong>!</h1>
-    <p>Basta preencher o formulario abaixo e clicar em "Gerar nota"</p>
+    <h1>Sua nota fiscal gerada de forma <strong>fácil</strong> e <strong>rápida</strong>!</h1>
+    <p>Basta preencher o formulário abaixo e clicar em "Gerar nota"</p>
     <%# <a class="btn btn-flat" href="#">Apply now</a> %>
   </div>
 </div>
 <div class="container form-block">
     <%# Form %>
-    <form>
+    <form accept-charset="UTF-8" action="/invoice" method="post">
         <h4>Dados do Prestador de serviço</h4>
         <div class="form-row mt-3">
             <div class="col">
                 <label for="inputEmail4">Nome da Empresa</label>
-                <input type="text" class="form-control" placeholder="Nome da empresa">
+                <input type="text" class="form-control" placeholder="Nome da empresa" name="company_name">
             </div>
                 <div class="col">
                 <label for="inputEmail4">CNPJ</label>
-                <input type="text" class="form-control" placeholder="CNPJ">
+                <input type="text" class="form-control" placeholder="CNPJ" name="company_cnpj">
             </div>
         </div>
         <div class="form-group mt-2">
             <label for="inputAddress">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="address">
         </div>
         <div class="form-group mt-2">
             <label for="inputAddress2">Complemento</label>
-            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor" name="address2">
         </div>
         <div class="form-row mt-2">
             <div class="form-group col-md-6">
                 <label for="inputCity">Cidade</label>
-                <input type="text" class="form-control" id="inputCity" placeholder="city">
+                <input type="text" class="form-control" id="inputCity" placeholder="city" name="cidade">
             </div>
             <div class="form-group col-md-4">
                 <label for="inputState">Estado</label>
-                <select id="inputState" class="form-control">
-                    <option selected>Choose...</option>
-                    <option>...</option>
+                <select id="inputState" class="form-control" name="estado">
+                    <option selected>Estado</option>
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>DF</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
                 </select>
             </div>
             <div class="form-group col-md-2">
                 <label for="inputZip">Código postal</label>
-                <input type="text" class="form-control" id="inputZip">
+                <input type="text" class="form-control" id="inputZip" placeholder="Código postal" name="postal_code">
             </div>
         </div>
-
-        <div class="form-row mt-2">
+        <div class="form-row mb-2">
             <div class="form-group col-md-6">
                 <label for="inputEmail4">NIRE</label>
-                <input type="text" class="form-control" id="inputEmail4" placeholder="NIRE">
+                <input type="text" class="form-control" id="inputEmail4" placeholder="NIRE" name="nire">
             </div>
             <div class="form-group col-md-3">
                 <label for="inputPassword4">Número da nota</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Número da nota">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Número da nota" name="invoice_number">
             </div>
             <div class="form-group col-md-3">
                 <label for="inputPassword4">Data de emissão</label>
-                <input type="text" class="form-control" id="inputPassword4" placeholder="Data de emissão">
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Data de emissão" name="invoice_date">
             </div>
         </div>
         <h4>Dados do Contratante</h4>
         <div class="form-row mt-3">
             <div class="col">
                 <label for="inputEmail4">Nome</label>
-                <input type="text" class="form-control" placeholder="Nome da empresa">
+                <input type="text" class="form-control" placeholder="Nome da empresa" name="buyer_name">
             </div>
                 <div class="col">
                 <label for="inputEmail4">CPF/CNPJ</label>
-                <input type="text" class="form-control" placeholder="CNPJ">
+                <input type="text" class="form-control" placeholder="CPF/CNPJ" name="Buyer_id">
             </div>
         </div>
         <div class="form-group mt-2">
             <label for="inputAddress">Endereço</label>
-            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
+            <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="buyer_address">
         </div>
         <div class="form-group">
             <div class="form-check">
             </div>
         </div>
-        <button type="submit" class="btn btn-primary">Gerar Nota</button>
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary">Gerar Nota</button>
+        </div>
     </form>
 </div>
 
