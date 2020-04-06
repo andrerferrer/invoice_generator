@@ -1,3 +1,24 @@
+
+<% @cpf = "999.999.999-99" %>
+<% @nome_do_usuario = "NOME COMPLETO DO USUÁRIO" %>
+<% @endereco_prestador = "ENDEREÇO COMPLETO DO PRESTADOR DE SERVIÇO" %>
+<% @cep_prestador = "99.999-99" %>
+<% @cnpj_prestador = "99.999.999/0001-99" %>
+<% @nire_prestador = "99-9-99999999-9" %>
+<% @data_emissao = "99/99/9999" %>
+<% @empresa_cliente = "EMPRESA CLIENTE LTDA" %>
+<% @endereco_cliente = "ONDE FICA A EMPRESA DO CLIENTE" %>
+<% @cep_cliente = "99.999-999" %>
+<% @cnpj_cpf_cliente = "99.999.999/0001-99" %>
+<% @placeholder_descr_servico1 = "AQUI É PRA COLOCAR O SERVIÇO DESCRITO E COMO FOI FEITO,
+COM UM CERTO NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES" %>
+<% @valor_servico1 = "R$ 10000,00" %>
+<% @placeholder_descr_servico2 = "AQUI É PRA COLOCAR OUTRO SERVIÇO E DESCREVER COMO FOI FEITO,
+COM ALGUM NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES" %>
+<% @valor_servico2 = "R$ 20000,00" %>
+
+
+
 <div class="w-75 text-center w-75" style="margin: 0 auto; ">
 
   <h1 class="font-weight-bold" style="margin-top: 200px;">DOCUMENTO FISCAL SIMPLIFICADO DE SERVIÇOS DE MICROEMPREENDEDOR INDIVIDUAL – MEI</h1>
@@ -6,19 +27,19 @@
   <br>
   <br>
 
-  <h1 class="font-weight-bold">NOME COMPLETO DO USUÁRIO 999.999.999-99</h1>
+  <h1 class="font-weight-bold"> <%= @nome_do_usuario %> <%= @cpf %> </h1>
 
   <br>
 
-  <h1>ENDEREÇO COMPLETO DA PESSOA COM O CEP TAMBÉM 99.999-99</h1>
+  <h1><%= @endereco_prestador %> <%= @cep_prestador %> </h1>
 
   <br>
 
-  <h1>CNPJ: 99.999.999/0001-99 NIRE: 99-9-99999999-9</h1>
+  <h1>CNPJ: <%= @cnpj_prestador %> NIRE: <%= @nire_prestador %></h1>
 
   <br>
 
-  <h1>DATA DE EMISSÃO: 99/99/9999   Nº9</h1>
+  <h1>DATA DE EMISSÃO: <%= @data_emissao %>   Nº9</h1>
 
   <br>
 
@@ -37,17 +58,17 @@
 
 <div class="w-75 text-left w-75" style="margin: 0 auto; ">
 
-  <h2>Nome EMPRESA CLIENTE LTDA</h2>
+  <h2>Nome: <%= @empresa_cliente %></h2>
 
   <br>
   <br>
 
-  <h2>Endereço ONDE FICA A EMPRESA DO CLIENTE, 99.999-999</h2>
+  <h2>Endereço: <%= @endereco_cliente %>, <%= @cep_cliente %> </h2>
 
   <br>
   <br>
 
-  <h2>CNPJ/CPF 99.999.999/0001-99</h2>
+  <h2>CNPJ/CPF: <%= @cnpj_cpf_cliente %></h2>
 
   <br>
 
@@ -64,14 +85,14 @@
   <ul>
     <li>
       <div class="container d-flex justify-content-between">
-        <div class="w-50">AQUI É PRA COLOCAR O SERVIÇO DESCRITO E COMO FOI FEITO, COM UM CERTO NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES</div>
-        <div>R$ 10000,00</div>
+        <div class="w-50"><%= @placeholder_descr_servico1 %></div>
+        <div><%= @valor_servico1 %></div>
       </div>
     </li>
     <li>
       <div class="container d-flex justify-content-between">
-        <div class="w-50">AQUI É PRA COLOCAR O SERVIÇO DESCRITO E COMO FOI FEITO, COM UM CERTO NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES</div>
-        <div>R$ 10000,00</div>
+        <div class="w-50"><%= @placeholder_descr_servico2 %></div>
+        <div><%= @valor_servico2 %></div>
       </div>
     </li>
   </ul>
@@ -85,8 +106,6 @@
 <br>
 
 
-<h1>Nota brabíssima</h1>
-<h2>As infos vindas da hash ficarão por aqui</h2>
 
 <%= link_to "Ver pdf da nota", "#{nota_path}.pdf", class: "btn btn-primary" %>
 
