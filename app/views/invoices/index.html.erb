@@ -1,31 +1,106 @@
-<div class="container mt-4">
-    <%= @invoice[:company_name] %>
-    <br>
-    <%= @invoice[:company_cnpj] %>
-    <br>
-    <%= @invoice[:address] %>
-    <br>
-    <%= @invoice[:address2] %>
-    <br>
-    <%= @invoice[:company_city] %>
-    <br>
-    <%= @invoice[:company_state] %>
-    <br>
-    <%= @invoice[:postal_code] %>
-    <br>
-    <%= @invoice[:nire] %>
-    <br>
-    <%= @invoice[:invoice_number] %>
-    <br>
-    <%= @invoice[:invoice_date] %>
-    <br>
-    <%= @invoice[:buyer_name] %>
-    <br>
-    <%= @invoice[:buyer_registry] %>
-    <br>
-    <%= @invoice[:buyer_address] %>
-    <br>
-    <%= @invoice[:service_description] %>
-    <br>
-    <%= @invoice[:service_value] %>
+<% @cpf = "999.999.999-99" %>
+<% @nome_do_usuario = "NOME COMPLETO DO USUÁRIO" %>
+<% @endereco_prestador = "ENDEREÇO COMPLETO DO PRESTADOR DE SERVIÇO" %>
+<% @cep_prestador = "99.999-99" %>
+<% @cnpj_prestador = "99.999.999/0001-99" %>
+<% @nire_prestador = "99-9-99999999-9" %>
+<% @data_emissao = "99/99/9999" %>
+<% @empresa_cliente = "EMPRESA CLIENTE LTDA" %>
+<% @endereco_cliente = "ONDE FICA A EMPRESA DO CLIENTE" %>
+<% @cep_cliente = "99.999-999" %>
+<% @cnpj_cpf_cliente = "99.999.999/0001-99" %>
+<% @placeholder_descr_servico1 = "AQUI É PRA COLOCAR O SERVIÇO DESCRITO E COMO FOI FEITO,
+COM UM CERTO NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES" %>
+<% @valor_servico1 = "R$ 10000,00" %>
+<% @placeholder_descr_servico2 = "AQUI É PRA COLOCAR OUTRO SERVIÇO E DESCREVER COMO FOI FEITO,
+COM ALGUM NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES" %>
+<% @valor_servico2 = "R$ 20000,00" %>
+
+
+
+<div class="w-75 text-center w-75" style="margin: 0 auto; ">
+
+  <h2 class="font-weight-bold" style="margin-top: 5em;">DOCUMENTO FISCAL SIMPLIFICADO DE SERVIÇOS DE MICROEMPREENDEDOR INDIVIDUAL – MEI</h2>
+  <h3 style="margin-top: 4em;">Extraído em <%= 3 - 1 %> vias</h3>
+
+  <br>
+  <br>
+
+  <h2 class="font-weight-bold"> <%= @nome_do_usuario %> <%= @cpf %> </h2>
+
+  <br>
+
+  <h2><%= @endereco_prestador %> <%= @cep_prestador %> </h2>
+
+  <br>
+
+  <h2>CNPJ: <%= @cnpj_prestador %> NIRE: <%= @nire_prestador %></h2>
+
+  <br>
+
+  <h2>DATA DE EMISSÃO: <%= @data_emissao %>   Nº9</h2>
+
+  <br>
+
+  <h2>1ª VIA TOMADOR DE SERVIÇO</h2>
+
+  <br>
+
+  <h2 class="font-weight-bold">TOMADOR DO(S) SERVIÇO(S)</h2>
+
 </div>
+
+<!-- --------------------------------------------------------------------------------- -->
+  <br>
+  <br>
+  <br>
+
+<div class="w-75 text-left w-75" style="margin: 0 auto; ">
+
+  <h3>Nome: <%= @empresa_cliente %></h3>
+
+  <br>
+  <br>
+
+  <h3>Endereço: <%= @endereco_cliente %>, <%= @cep_cliente %> </h3>
+
+  <br>
+  <br>
+
+  <h3>CNPJ/CPF: <%= @cnpj_cpf_cliente %></h3>
+
+  <br>
+
+<!-- --------------------------------------------------------------------------------- -->
+
+  <hr style="border: 2px solid black;">
+    <div class="container d-flex justify-content-around">
+      <h4 class="font-weight-bold m-0">Discriminação dos serviços</h4>
+      <h4 class="font-weight-bold m-0">Valor</h4>
+    </div>
+  <hr style="border: 2px solid black;">
+
+
+  <ul>
+    <li>
+      <div class="container d-flex justify-content-around">
+       <p class="mr-5"><%= @placeholder_descr_servico1 %></p>
+        <p class="mx-5"><%= @valor_servico1 %></p>
+      </div>
+    </li>
+    <li>
+      <div class="container d-flex justify-content-around">
+       <p class="mr-5"><%= @placeholder_descr_servico2 %></p>
+        <p class="mx-5"><%= @valor_servico2 %></p>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<br>
+
+<%#= link_to "Ver pdf da nota", "#{nota_path}.pdf", class: "btn btn-primary" %>
+
+
+
+
