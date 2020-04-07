@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 ruby '2.6.5'
 
@@ -16,19 +18,19 @@ gem 'uglifier'
 gem 'webpacker'
 
 group :development do
-  gem 'web-console', '>= 3.3.0'
   gem 'rubocop', require: false
+  gem 'web-console', '>= 3.3.0'
 end
 
 group :development, :test do
+  gem 'dotenv-rails'
+  gem 'listen', '~> 3.0.5'
   gem 'pry-byebug'
   gem 'pry-rails'
-  gem 'listen', '~> 3.0.5'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
-  gem 'dotenv-rails'
 end
 
-#Gems to handle/generate pdf on the view side
+# Gems to handle/generate pdf on the view side
 gem 'wicked_pdf'
 gem 'wkhtmltopdf-binary'
