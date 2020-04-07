@@ -1,0 +1,133 @@
+<%# Banner %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://smartsociates.com/immortalHeader/images/slider_background.svg);">
+  <div class="container">
+    <h1>Sua nota fiscal gerada de forma <strong>fácil</strong> e <strong>rápida</strong>!</h1>
+    <p>Basta preencher o formulário abaixo e clicar em "Gerar nota"</p>
+    <%# <a class="btn btn-flat" href="#">Apply now</a> %>
+  </div>
+</div>
+<div class="container form-block">
+    <%# Form %>
+    <form accept-charset="UTF-8" action="/invoices" method="post">
+        <h4>Dados do Prestador de serviço</h4>
+        <div class="form-row mt-3">
+            <div class="col">
+                <label for="inputEmail4">Nome da Empresa</label>
+                <input type="text" class="form-control" placeholder="Nome da empresa" name="company_name">
+            </div>
+                <div class="col">
+                <label for="inputEmail4">CNPJ</label>
+                <input type="text" class="form-control" placeholder="CNPJ" name="company_cnpj">
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Endereço" name="address">
+        </div>
+        <div class="form-group mt-2">
+            <label for="inputAddress2">Complemento</label>
+            <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, Bloco, etc" name="address2">
+        </div>
+        <div class="form-row mt-2">
+            <div class="form-group col-md-6">
+                <label for="inputCity">Cidade</label>
+                <input type="text" class="form-control" id="inputCity" placeholder="Cidade" name="company_city">
+            </div>
+            <div class="form-group col-md-4">
+                <label for="inputState">Estado</label>
+                <select id="inputState" class="form-control" name="company_state">
+                    <option selected>Estado</option>
+                    <option>AC</option>
+                    <option>AL</option>
+                    <option>AP</option>
+                    <option>AM</option>
+                    <option>BA</option>
+                    <option>CE</option>
+                    <option>DF</option>
+                    <option>ES</option>
+                    <option>GO</option>
+                    <option>MA</option>
+                    <option>MT</option>
+                    <option>MS</option>
+                    <option>MG</option>
+                    <option>PA</option>
+                    <option>PB</option>
+                    <option>PR</option>
+                    <option>PE</option>
+                    <option>PI</option>
+                    <option>RJ</option>
+                    <option>RN</option>
+                    <option>RS</option>
+                    <option>RO</option>
+                    <option>RR</option>
+                    <option>SC</option>
+                    <option>SP</option>
+                    <option>SE</option>
+                    <option>TO</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="inputZip">Código postal</label>
+                <input type="text" class="form-control" id="inputZip" placeholder="Código postal" name="postal_code">
+            </div>
+        </div>
+        <div class="form-row mb-2">
+            <div class="form-group col-md-6">
+                <label for="inputEmail4">NIRE</label>
+                <input type="text" class="form-control" id="inputEmail4" placeholder="NIRE" name="nire">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPassword4">Número da nota</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Número da nota" name="invoice_number">
+            </div>
+            <div class="form-group col-md-3">
+                <label for="inputPassword4">Data de emissão</label>
+                <input type="text" class="form-control" id="inputPassword4" placeholder="Data de emissão" name="invoice_date">
+            </div>
+        </div>
+        <h4>Dados do Contratante</h4>
+        <div class="form-row mt-3">
+            <div class="col">
+                <label for="inputEmail4">Nome</label>
+                <input type="text" class="form-control" placeholder="Nome da empresa" name="buyer_name">
+            </div>
+                <div class="col">
+                <label for="inputEmail4">CPF/CNPJ</label>
+                <input type="text" class="form-control" placeholder="CPF/CNPJ" name="buyer_registry">
+            </div>
+        </div>
+        <div class="form-group mt-2">
+            <label for="inputAddress">Endereço</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Endereço completo" name="buyer_address">
+        </div>
+        <h4>Discriminação dos Serviços</h4>
+        <div class="form-row mt-3">
+            <div class="col">
+                <label for="inputEmail4">Serviço</label>
+                <input type="text" class="form-control" placeholder="Descrição do serviço" name="service_description">
+            </div>
+                <div class="col">
+                <label for="inputEmail4">Preço</label>
+                <input type="text" class="form-control" placeholder="Preço" name="service_value">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <input type="submit" class="btn btn-primary">
+        </div>
+    </form>
+</div>
+
+<%# Footer %>
+<div class="footer justify-content-center">
+    <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+</div>
