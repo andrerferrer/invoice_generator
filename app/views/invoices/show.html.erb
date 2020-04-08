@@ -18,11 +18,11 @@ COM ALGUM NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERE
 
   <br>
 
-  <h2 class="font-weight-bold"> <%= @invoice["company_name"] %> </h2>
+  <h2 class="font-weight-bold"> <%= @invoice["company_name"].upcase %> </h2>
 
   <br>
 
-  <h2><%= "#{@invoice['address']}, #{@invoice['address2']}, #{@invoice['company_city']}, #{@invoice['company_state']}" %> <%= @invoice["postal_code"] %> </h2>
+  <h2><%= "#{@invoice['address'].upcase}, #{@invoice['address2'].upcase}, #{@invoice['company_city'].upcase}, #{@invoice['company_state'].upcase}" %> <%= @invoice["postal_code"] %> </h2>
 
   <br>
 
@@ -54,7 +54,7 @@ COM ALGUM NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERE
   <br>
 
 
-  <h3>Endereço: <%= @invoice["buyer_address"] %>, <%= @cep_cliente %> </h3>
+  <h3>Endereço: <%= "#{@invoice['buyer_address']}, #{@invoice['buyer_address2']}, #{@invoice['buyer_city']}, #{@invoice['buyer_state']}" %>, <%= @invoice["buyer_postal_code"] %> </h3>
 
   <br>
 
@@ -77,20 +77,10 @@ COM ALGUM NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERE
     <li>
       <div class="row d-flex justify-content-around my-2">
         <div class="col-sm-9">
-          <p><%= @invoice["service_description"] %></p>
+          <h4><%= @invoice["service_description"] %></h4>
         </div>
         <div class="col-sm-3 text-center">
-          <p><%= @invoice["service_value"] %></p>
-        </div>
-      </div>
-    </li>
-    <li>
-      <div class="row d-flex justify-content-around my-2">
-        <div class="col-sm-9">
-          <p><%= @placeholder_descr_servico2 %></p>
-        </div>
-        <div class="col-sm-3 text-center">
-          <p><%= @valor_servico2 %></p>
+          <h4><%= @invoice["service_value"] %></h4s>
         </div>
       </div>
     </li>
