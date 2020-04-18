@@ -1,3 +1,14 @@
+
+
+<% @endereco_prestador = "#{@invoice['address']}, #{@invoice['address2']}, #{@invoice['company_city']}, #{@invoice['company_state']}" %>
+
+<% @cep_cliente = "99.999-999" %>
+<% @placeholder_descr_servico2 = "AQUI É PRA COLOCAR OUTRO SERVIÇO E DESCREVER COMO FOI FEITO,
+COM ALGUM NÍVEL DE DETALHES E POR ISSO ESTOU TESTANDO A QUANTIDADE DE CARACTERES" %>
+<% @valor_servico2 = "R$ 20000,00" %>
+
+
+
 <%# <div class="w-75 text-center" style="margin: 0 auto; "> %>
 <div class="my-container text-center">
 
@@ -63,18 +74,16 @@
 
 
   <ul>
-  <% @invoice['service_description'].each_with_index do |service, index| %>
     <li>
       <div class="row d-flex justify-content-around my-2">
         <div class="col-sm-9">
-          <h4><%= service %></h4>
+          <h4><%= @invoice["service_description"] %></h4>
         </div>
         <div class="col-sm-3 text-center">
-          <h4><%= @invoice["service_value"][index] %></h4s>
+          <h4><%= @invoice["service_value"] %></h4s>
         </div>
       </div>
     </li>
-    <% end %>
   </ul>
 </div>
 
