@@ -148,16 +148,21 @@
             </div>
         </div>
         <h4>Discriminação dos Serviços</h4>
-        <div class="form-row mt-3">
-            <div class="col">
-                <label for="inputEmail4">Serviço</label>
-                <input type="text" class="form-control" placeholder="Descrição do serviço" name="service_description">
-            </div>
-                <div class="col">
-                <label for="inputEmail4">Preço</label>
-                <input type="text" class="form-control" placeholder="Preço" name="service_value">
+            <div class="form-row mt-3" id="service">
+                <div class="col-md-7">
+                    <label for="inputEmail4">Serviço</label>
+                    <input type="text" class="form-control" placeholder="Descrição do serviço" name="service_description[]">
+                </div>
+                <div class="col-md-4">
+                    <label for="inputEmail4">Preço</label>
+                    <input type="text" class="form-control" placeholder="Preço" name="service_value[]">
+                </div>
+                <div class="col-md-1 icon" id="add_service">
+                    <i class="fa fa-plus-circle plus"></i>
+                </div>
             </div>
         </div>
+
         <div class="form-group">
             <div class="form-check">
             </div>
